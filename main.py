@@ -1,10 +1,11 @@
 from tkinter import *
 
-COLORS = ["#9A9483", "#AAA492", "#C7BEA2", "#E5DCC3", "#ffffff"]
-count = 4
+COLORS = ["#9A9483", "#C7BEA2", "#E5DCC3", "#ffffff"]
+count = 3
 
 
-def start(event=None):
+def start():
+    canvas.create_image(250, 140, image=timer_img)
     entry.grid(column=0, row=0, columnspan=2)
     canvas.delete(logo_image)
     canvas.itemconfig(label, text="Don't Stop Typing or your Progress will be lost🔊")
@@ -55,5 +56,5 @@ entry = Entry(window, width=30, font='Arial 20')
 timer_text = canvas.create_text(300, 150, text="", fill="#46244C", font=("Helvetica", 25, "bold"))
 
 label_2 = canvas.create_text(300, 300, text="", font="Areal 15 bold", fill="#3A3845")
-
+timer_img = PhotoImage(file="icons8-timer-64.png")
 window.mainloop()
