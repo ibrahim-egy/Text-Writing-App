@@ -26,7 +26,7 @@ def count_down(c):
     entry.config(background=COLORS[c])
     if c == 0:
         entry.delete(0, END)
-        canvas.itemconfig(label_2, text="All your Progress is lost 😓\ntry again.")
+        canvas.itemconfig(label_2, text="All your Progress is lost 😓\nTry again.")
     elif c > 0:
         timer = window.after(1000, count_down, c - 1)
 
